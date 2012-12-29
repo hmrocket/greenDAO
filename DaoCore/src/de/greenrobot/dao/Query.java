@@ -35,7 +35,7 @@ public class Query<T> extends AbstractQuery<T> {
     private int limitPosition = -1;
     private int offsetPosition = -1;
 
-    Query(AbstractDao<T, ?> dao, String sql, Collection<Object> valueList) {
+    public Query(AbstractDao<T, ?> dao, String sql, Collection<Object> valueList) {
         super(dao, sql, valueList);
     }
 
