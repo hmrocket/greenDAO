@@ -51,9 +51,26 @@ public class ExampleDaoGenerator {
         new DaoGenerator().generateAll(schema, "../../../../src");
     }
 
-    private static void addDeal(Schema schema) {
-		// TODO Auto-generated method stub
-		
+    private static Entity addDeal(Schema schema) {
+		// 17 - 1 relation Deal-Hotel 1:n,
+    	Entity deal = schema.addEntity("Deal");
+		deal.addIdProperty();
+		deal.addStringProperty("name");
+		deal.addFloatProperty("bar");
+		deal.addFloatProperty("bdr");
+		deal.addIntProperty("bdp");
+		deal.addStringProperty("currency");
+		deal.addIntProperty("guest_nb");
+		deal.addIntProperty("night_nb");
+		deal.addBooleanProperty("is_cancelable");
+		deal.addBooleanProperty("is_refundable");
+		deal.addStringProperty("status");
+		deal.addDateProperty("start_at");
+		deal.addDateProperty("end_at");
+		deal.addStringProperty("discount_formula");
+		deal.addDateProperty("created_at");
+		deal.addDateProperty("updated_at");
+		return deal;
 	}
 
 	private static Entity addHotel(Schema schema) {
