@@ -137,7 +137,7 @@ public class ExampleDaoGenerator {
 	
 	private static Entity addPictureCollection(Schema schema) {
 		Entity pictureCollection = schema.addEntity("PictureCollection");
-		pictureCollection.addIdProperty();
+		pictureCollection.addIdProperty().autoincrement();
 		pictureCollection.addStringProperty("medium");
 		pictureCollection.addStringProperty("small");
 		pictureCollection.addStringProperty("thumbnail");
