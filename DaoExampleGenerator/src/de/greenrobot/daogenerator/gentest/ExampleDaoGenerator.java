@@ -54,7 +54,7 @@ public class ExampleDaoGenerator {
         Property hotelAddress = Hotel.addLongProperty("hotelAddressId").getProperty();
         Property hotelDescription = Hotel.addLongProperty("hotelDescriptionId").getProperty();
         Property hotelPicture = HotelPicture.addLongProperty("hotelId").getProperty();
-		Property positionPicture = HotelPicture.addStringProperty("position").getProperty();
+		Property positionPicture = HotelPicture.addLongProperty("position").getProperty();
         Hotel.addToOne(HotelAddress, hotelAddress, "__HotelAddress");
         Hotel.addToOne(HotelDescription, hotelDescription, "__HotelDescription");
         Hotel.addToMany(HotelPicture, hotelPicture, "__HotelPicture").orderAsc(positionPicture);
